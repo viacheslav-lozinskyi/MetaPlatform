@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MetaProject.technology version="1.0">
+  <info>
+    <item name="ABBREVIATION" value=""/>
+    <item name="AUTHORS" value=""/>
+    <item name="COPYRIGHT" value=""/>
+    <item name="CULTURE" value=""/>
+    <item name="DESCRIPTION" value=""/>
+    <item name="KEYWORDS" value=""/>
+    <item name="OWNERS" value=""/>
+    <item name="PICTURE" value=""/>
+    <item name="TITLE" value="MetaPlatform"/>
+    <item name="TYPE" value="PROJECT"/>
+    <item name="VERSION" value=""/>
+    <item name="VERSIONS" value=""/>
+  </info>
+
+  <license>
+    <item name="ABBREVIATION" value=""/>
+    <item name="TITLE" value=""/>
+    <item name="VERSION" value=""/>
+  </license>
+
+  <link>
+    <item name="DESCRIPTION" value=""/>
+    <item name="DOWNLOAD" value=""/>
+    <item name="LICENSE" value=""/>
+    <item name="PICTURE" value=""/>
+    <item name="SOURCES" value=""/>
+  </link>
+
+  <variants>
+    <!--<item name="Visual Studio" compilers="12.0;14.0;15.0;" files=".vxproj;" platforms="Windows;" processors="" technologies="C++ Runtime Library;" types="APPLICATION;CONSOLE;LIBRARY;INSTALLER;STATIC;TEST;WEB;" versions="1.0;"/>-->
+  </variants>
+</MetaProject.technology>
