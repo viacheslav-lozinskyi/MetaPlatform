@@ -10,7 +10,7 @@
 MP_CLASS_INTERNAL __MP_CONVERT
 {
 public:
-    __forceinline static ::System::String^ GetBase64(::System::IO::Stream^ context)
+    inline static ::System::String^ GetBase64(::System::IO::Stream^ context)
     {
         if (context->CanSeek)
         {
@@ -23,7 +23,7 @@ public:
         }
     }
 
-    __forceinline static ::System::IO::MemoryStream^ GetStream(::System::IO::Stream^ context)
+    inline static ::System::IO::MemoryStream^ GetStream(::System::IO::Stream^ context)
     {
         auto a_Result = dynamic_cast<::System::IO::MemoryStream^>(context);
         if (a_Result == nullptr)
@@ -39,7 +39,7 @@ public:
         return a_Result;
     }
 
-    __forceinline static ::System::String^ GetString(::System::IO::Stream^ context, ::System::Text::Encoding^ value)
+    inline static ::System::String^ GetString(::System::IO::Stream^ context, ::System::Text::Encoding^ value)
     {
         if (context->CanSeek)
         {
@@ -52,7 +52,7 @@ public:
         }
     }
 
-    __forceinline static void SetStream(::System::IO::Stream^ context, array<unsigned char>^ value)
+    inline static void SetStream(::System::IO::Stream^ context, array<unsigned char>^ value)
     {
         if (context->CanSeek)
         {
@@ -98,7 +98,7 @@ public:
 #define MP_CONVERT_STRING_FROM_TIME(CONTEXT, FORMAT)                           (CONTEXT).ToString(FORMAT, ::System::Globalization::CultureInfo::InvariantCulture)
 
 #define MP_CONVERT_STRING_TO_BASE64(CONTEXT)                                   ::System::Convert::ToBase64String(::System::Text::Encoding::ASCII->GetBytes(CONTEXT), 0, (CONTEXT)->Length)
-#define MP_CONVERT_STRING_TO_DOUBLE(CONTEXT)                                   ::System::Convert::ToDouble(CONTEXT)
+#define MP_CONVERT_STRING_TO_DOUBLE(CONTEXT)                                   ::System::Convert::ToDouble(CONTEXT, ::System::Globalization::CultureInfo::InvariantCulture)
 #define MP_CONVERT_STRING_TO_ESCAPED(CONTEXT)                                  ::System::Uri::EscapeDataString(CONTEXT)
 #define MP_CONVERT_STRING_TO_HEX(CONTEXT)                                      ::System::Convert::ToInt32(CONTEXT, 16)
 #define MP_CONVERT_STRING_TO_INT(CONTEXT)                                      ::System::Convert::ToInt32(CONTEXT)

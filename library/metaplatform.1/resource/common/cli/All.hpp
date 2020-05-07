@@ -109,13 +109,18 @@
 #define MP_STRING_BUFFER                                                       ::System::String^
 #define MP_STRING_CONST                                                        ::System::String^
 #define MP_STRING_NEW                                                          gcnew ::System::String
+#define MP_STRING_CREATE(VALUE, COUNT)                                         gcnew ::System::String(VALUE, COUNT)
 #define MP_STRING_COMPARE(VALUE1, VALUE2)                                      (::System::String::Compare((VALUE1), (VALUE2), true) == 0)
 #define MP_STRING_EMPTY(CONTEXT)                                               ::System::String::IsNullOrEmpty(CONTEXT)
 #define MP_STRING_CONTAINS(CONTEXT, VALUE)                                     (CONTEXT)->Contains(VALUE)
 #define MP_STRING_GET(CONTEXT, INDEX)                                          (CONTEXT)[INDEX]
 #define MP_STRING_BUFFER_GET(CONTEXT)                                          (CONTEXT)
 #define MP_STRING_SIZE_GET(CONTEXT)                                            ((int)((CONTEXT)->Length))
+#define MP_STRING_RESERVE_GET(CONTEXT)                                         ((int)((CONTEXT)->Length))
+#define MP_STRING_RESERVE_SET(CONTEXT, VALUE)
+#define MP_STRING_INDEXFROM(CONTEXT, SUBSTRING, INDEX)                         (CONTEXT)->IndexOf(SUBSTRING, INDEX)
 #define MP_STRING_INDEXOF(CONTEXT, SUBSTRING)                                  (CONTEXT)->IndexOf(SUBSTRING)
+#define MP_STRING_LASTINDEXFROM(CONTEXT, SUBSTRING, INDEX)                     (CONTEXT)->LastIndexOf(SUBSTRING, INDEX)
 #define MP_STRING_LASTINDEXOF(CONTEXT, SUBSTRING)                              (CONTEXT)->LastIndexOf(SUBSTRING)
 #define MP_STRING_INSERT(CONTEXT, INDEX, VALUE)                                (CONTEXT)->Insert((INDEX), (VALUE))
 #define MP_STRING_REMOVE(CONTEXT, INDEX, COUNT)                                (CONTEXT)->Remove((INDEX), (COUNT))
@@ -124,13 +129,14 @@
 #define MP_STRING_UPPER(CONTEXT)                                               (CONTEXT)->ToUpper()
 #define MP_STRING_LOWER(CONTEXT)                                               (CONTEXT)->ToLower()
 #define MP_STRING_TRIM(CONTEXT)                                                (CONTEXT)->Trim()
-#define MP_STRING_TRIMSTART(CONTEXT)                                           (CONTEXT)->TrimStart()
+#define MP_STRING_TRIMBEGIN(CONTEXT)                                           (CONTEXT)->TrimStart()
 #define MP_STRING_TRIMEND(CONTEXT)                                             (CONTEXT)->TrimEnd()
 
 #define MP_TIME                                                                ::System::DateTime
 #define MP_TIME_CURRENT                                                        ::System::DateTime::Now
 #define MP_TIME_TIMESTAMP_GET                                                  ::System::Diagnostics::Stopwatch::GetTimestamp
 #define MP_TIME_TIMESTAMP_MILLISECOND_GET                                      ::System::Environment::TickCount
+#define MP_TIME_MILISECOND_DIFF(CONTEXT1, CONTEXT2)                            (int)((CONTEXT2)->Subtract(*(CONTEXT1)).TotalMilliseconds)
 #define MP_TIME_MILISECOND_GET(CONTEXT)                                        (CONTEXT)->Millisecond
 #define MP_TIME_SECOND_GET(CONTEXT)                                            (CONTEXT)->Second
 #define MP_TIME_MINUTE_GET(CONTEXT)                                            (CONTEXT)->Minute

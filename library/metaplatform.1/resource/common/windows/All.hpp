@@ -124,7 +124,7 @@
 #define MP_STRING_UPPER(CONTEXT)                                               //(CONTEXT)->ToUpper()
 #define MP_STRING_LOWER(CONTEXT)                                               //(CONTEXT)->ToLower()
 #define MP_STRING_TRIM(CONTEXT)                                                //(CONTEXT)->Trim()
-#define MP_STRING_TRIMSTART(CONTEXT)                                           //(CONTEXT)->TrimStart()
+#define MP_STRING_TRIMBEGIN(CONTEXT)                                           //(CONTEXT)->TrimStart()
 #define MP_STRING_TRIMEND(CONTEXT)                                             //(CONTEXT)->TrimEnd()
 
 #define MP_TIME                                                                //::System::DateTime

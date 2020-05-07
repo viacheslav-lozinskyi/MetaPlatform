@@ -13,6 +13,7 @@
 #define MP_SYSTEM_COMPUTER_NAME                                                ::System::Environment::MachineName
 #define MP_SYSTEM_CURSOR_SIZE_X                                                (int)::System::Windows::SystemParameters::CursorWidth
 #define MP_SYSTEM_CURSOR_SIZE_Y                                                (int)::System::Windows::SystemParameters::CursorHeight
+#define MP_SYSTEM_CULTURE_GET                                                  ::System::Globalization::CultureInfo::CurrentCulture->Name
 #define MP_SYSTEM_ICON_SIZE_X                                                  (int)::System::Windows::SystemParameters::SmallIconWidth
 #define MP_SYSTEM_ICON_SIZE_Y                                                  (int)::System::Windows::SystemParameters::SmallIconHeight
 

@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include "resource/clipboard/All.hpp"
 #include "resource/console/All.hpp"
 #include "resource/convert/All.hpp"
 #include "resource/debugger/All.hpp"
