@@ -1,0 +1,1 @@
+"C:\Program Files\Unity\Editor\Data\Tools\NuGet.exe" pack ..\..\library\metaplatform.1\MetaPlatform.nuspec -OutputDirectory ..\..\builds\nuget
