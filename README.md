@@ -1,37 +1,57 @@
-## Welcome to GitHub Pages
+## What is MetaPlatform?
 
-You can use the [editor on GitHub](https://github.com/viacheslav-lozinskyi/MetaOutput/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This technology is necessary for that who solve next issues:
+- Write the same code for different platforms;
+- Write the same code using different languages;
+- Write the same code using different compilers;
+- Write the same code using different toolsets;
+- Convert own project from one technology to another one.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Usually it's difficult and expensive.
+Usually it's a reason why products are implemented just on one platform using one language.
+Usually it's a reason to use Java.
 
-### Markdown
+### Why MetaPlatform?
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Java is solution, but it's also too expensive, because necessary to rewrite fully your code.
+Not so good decision looking on it...
 
-```markdown
-Syntax highlighted code block
+May be STL or Boost?
+It's standard solution for C++ projects, and it's looks better, hovewer if necessary to use such C++ code with .NET code it will be additional problem. Sugnificant problem...
+Moreover STL and Boost add own code which consume resources and may have own bugs.
 
-# Header 1
-## Header 2
-### Header 3
+Any other cross-platform libraries have such problems too.
 
-- Bulleted
-- List
+So MetaProject is created as answer on that problems.
 
-1. Numbered
-2. List
+### Benefits
 
-**Bold** and _Italic_ and `Code` text
+- MetaPlatform provide seemless integration to any desired platform;
+- MetaPlatform uses types and classes of target platform;
+- MetaPlatform don't have any own code at all;
+- MetaPlatform don't have any own bugs at all;
+- MetaPlatform don't consume any resources;
+- MetaPlatform can be expanded for support of any platform;
+- MetaPlatform can be expanded for support of any language;
+- MetaPlatform can be expanded for support of any compiler;
+- MetaPlatform can be used for converting of existing project by step-by-step approach;
+- MetaPlatform can be used for converting from any technology to any technology.
 
-[Link](url) and ![Image](src)
+### Approach
+
+This technology contains only macroses on C/C++ language.
+All types and operations are expresed just by those macroses.
+
+This is short example which demonstrate how to use it:
+```cpp
+  auto size = MP_VECTOR_SIZE_GET(collection);
+  for (auto i = 0; i < size; i++)
+  {
+     __Execute(url, MP_VECTOR_GET(collection, i));
+  }
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Comunity
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/viacheslav-lozinskyi/MetaOutput/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+I will glad to invite any developers who need this product and want to develop of MetaPlatform.
+You participation can make product better...
