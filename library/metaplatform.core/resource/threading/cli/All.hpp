@@ -39,8 +39,17 @@
 #define MP_THREAD_INTERLOCKED_GET(VARIABLE)                                    ::System::Threading::Interlocked::Read(VARIABLE)
 #define MP_THREAD_INTERLOCKED_SET(VARIABLE, VALUE)                             ::System::Threading::Interlocked::Exchange((VARIABLE), VALUE)
 
+#define MP_THREAD_CONDITION_VARIABLE                                           int
+#define MP_THREAD_CONDITION_VARIABLE_INITIALIZE(CONTEXT)                       (CONTEXT) = 0
+#define MP_THREAD_CONDITION_VARIABLE_FINALIZE(CONTEXT)                         ::System::Threading::Monitor::Exit(CONTEXT); (CONTEXT) = 0
+#define MP_THREAD_CONDITION_VARIABLE_LOCK(CONTEXT)                             ::System::Threading::Monitor::Enter(CONTEXT)
+#define MP_THREAD_CONDITION_VARIABLE_PULSE(CONTEXT)                            ::System::Threading::Monitor::PulseAll(CONTEXT)
+#define MP_THREAD_CONDITION_VARIABLE_TRY(CONTEXT)                              ::System::Threading::Monitor::TryEnter(CONTEXT)
+#define MP_THREAD_CONDITION_VARIABLE_UNLOCK(CONTEXT)                           ::System::Threading::Monitor::Exit(CONTEXT)
+#define MP_THREAD_CONDITION_VARIABLE_WAIT(CONTEXT)                             ::System::Threading::Monitor::Wait(CONTEXT)
+
 #define MP_THREAD_MUTEX                                                        ::System::Threading::Mutex
-#define MP_THREAD_MUTEX_INITIALIZE(CONTEXT, NAME)                              CONTEXT = gcnew ::System::Threading::Mutex(false, NAME)
+#define MP_THREAD_MUTEX_INITIALIZE(CONTEXT, NAME, ISLOCKED)                    CONTEXT = gcnew ::System::Threading::Mutex(ISLOCKED, NAME)
 #define MP_THREAD_MUTEX_FINALIZE(CONTEXT)                                      delete (CONTEXT)
 #define MP_THREAD_MUTEX_LOCK(CONTEXT)                                          (CONTEXT)->WaitOne()
 #define MP_THREAD_MUTEX_UNLOCK(CONTEXT)                                        (CONTEXT)->ReleaseMutex()
