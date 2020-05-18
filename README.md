@@ -52,7 +52,7 @@ This is short example which demonstrate how to use it:
   }
 ```
 
-### Comunity
+### Community
 
 I will glad to invite any developers who need this product and want to develop of MetaPlatform.
 Your participation can make product better...
