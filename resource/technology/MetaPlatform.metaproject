@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MetaProject.technology version="1.0">
   <info>
-    <item name="ABBREVIATION" value=""/>
-    <item name="AUTHORS" value=""/>
-    <item name="COPYRIGHT" value=""/>
+    <item name="ABBREVIATION" value="MP"/>
+    <item name="AUTHORS" value="Viacheslav Lozinskyi"/>
+    <item name="COPYRIGHT" value="Copyright (c) 2018-2020 by Viacheslav Lozinskyi. All rights reserved."/>
     <item name="CULTURE" value=""/>
-    <item name="DESCRIPTION" value=""/>
-    <item name="KEYWORDS" value=""/>
-    <item name="OWNERS" value=""/>
+    <item name="DESCRIPTION" value="This platform allow to write cross-platform, cross-compiler and cross-language code"/>
+    <item name="KEYWORDS" value="MetaPlatform, C++, cross-platform, cross-compiler, cross-language, platform, native"/>
+    <item name="OWNERS" value="Viacheslav Lozinskyi"/>
     <item name="PICTURE" value=""/>
     <item name="TITLE" value="MetaPlatform"/>
-    <item name="TYPE" value="PROJECT"/>
+    <item name="TYPE" value="PLATFORM"/>
     <item name="VERSION" value=""/>
     <item name="VERSIONS" value=""/>
   </info>
 
   <license>
-    <item name="ABBREVIATION" value=""/>
+    <item name="ABBREVIATION" value="MIT"/>
     <item name="TITLE" value=""/>
     <item name="VERSION" value=""/>
   </license>
 
   <link>
-    <item name="DESCRIPTION" value=""/>
-    <item name="DOWNLOAD" value=""/>
-    <item name="LICENSE" value=""/>
+    <item name="DESCRIPTION" value="https://viacheslav-lozinskyi.github.io/MetaPlatform/"/>
+    <item name="DOWNLOAD" value="https://github.com/viacheslav-lozinskyi/MetaPlatform"/>
+    <item name="LICENSE" value="https://github.com/viacheslav-lozinskyi/MetaPlatform/blob/master/LICENSE"/>
     <item name="PICTURE" value=""/>
-    <item name="SOURCES" value=""/>
+    <item name="SOURCES" value="https://github.com/viacheslav-lozinskyi/MetaPlatform"/>
   </link>
 
   <variants>
