@@ -36,6 +36,7 @@
 #define MP_FLOAT                                                               float
 #define MP_DOUBLE                                                              double
 #define MP_POINTER                                                             ::System::Object
+#define MP_INT                                                                 int
 #define MP_INT8                                                                __int8
 #define MP_INT16                                                               __int16
 #define MP_INT32                                                               __int32

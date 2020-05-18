@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>MetaPlatform</id>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <title>MetaPlatform</title>
     <authors>Viacheslav Lozinskyi</authors>
     <owners>Viacheslav Lozinskyi</owners>
@@ -14,10 +14,8 @@
     <repository type="git" url="https://github.com/viacheslav-lozinskyi/MetaPlatform" branch="master"/>
     <license type="expression">MIT</license>
     <releaseNotes>
-      - Project is restructuring
-      - Support of Native, .NET Standard, .NET Framework and .NET Core targets is implemented
+      - MP_INT is added
       - Scripts are updated
-      - Support of conditional variables is implemented
     </releaseNotes>
     <copyright>Copyright (c) 2018-2020 by Viacheslav Lozinskyi. All rights reserved.</copyright>
     <tags>MetaPlatform, C++, cross-platform, cross-compiler, cross-language, platform, native</tags>
