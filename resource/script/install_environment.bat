@@ -15,5 +15,5 @@
 
 :finish
 @echo ==========================================================================
-@echo Restart this console and opened IDEs to apply changes...
+@echo Restart Windows to apply changes...
 @echo ==========================================================================

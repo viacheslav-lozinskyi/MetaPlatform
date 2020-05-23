@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata>
+  <metadata minClientVersion="4.0">
     <id>MetaPlatform</id>
     <version>1.0.5</version>
     <title>MetaPlatform</title>
@@ -15,7 +15,7 @@
     <license type="expression">MIT</license>
     <releaseNotes>
 - Scripts are updated
-- 
+- NuGet package is updated
     </releaseNotes>
     <copyright>Copyright (c) 2018-2020 by Viacheslav Lozinskyi. All rights reserved.</copyright>
     <tags>MetaPlatform, C++, cross-platform, cross-compiler, cross-language, platform, native</tags>
