@@ -48,6 +48,15 @@
 #define MP_THREAD_CONDITION_VARIABLE_UNLOCK(CONTEXT)                           ::System::Threading::Monitor::Exit(CONTEXT)
 #define MP_THREAD_CONDITION_VARIABLE_WAIT(CONTEXT)                             ::System::Threading::Monitor::Wait(CONTEXT)
 
+#define MP_THREAD_EVENT                                                        HANDLE
+#define MP_THREAD_EVENT_INITIALIZE(CONTEXT, NAME)                              CONTEXT = ::CreateEventA(nullptr, SYNCHRONIZE | EVENT_MODIFY_STATE, FALSE, NAME);
+#define MP_THREAD_EVENT_OPEN(CONTEXT, NAME)                                    CONTEXT = ::OpenEventA(SYNCHRONIZE | EVENT_MODIFY_STATE, FALSE, NAME)
+#define MP_THREAD_EVENT_FINALIZE(CONTEXT)                                      ::CloseHandle(CONTEXT)
+#define MP_THREAD_EVENT_WAIT(CONTEXT)                                          ::WaitForSingleObject(CONTEXT, INFINITE)
+#define MP_THREAD_EVENT_LOCK(CONTEXT)                                          ::SetEvent(CONTEXT)
+#define MP_THREAD_EVENT_UNLOCK(CONTEXT)                                        ::ResetEvent(CONTEXT)
+#define MP_THREAD_EVENT_PULSE(CONTEXT)                                         ::PulseEvent(CONTEXT)
+
 #define MP_THREAD_MUTEX                                                        ::System::Threading::Mutex
 #define MP_THREAD_MUTEX_INITIALIZE(CONTEXT, NAME, ISLOCKED)                    CONTEXT = gcnew ::System::Threading::Mutex(ISLOCKED, NAME)
 #define MP_THREAD_MUTEX_FINALIZE(CONTEXT)                                      delete (CONTEXT)
@@ -70,3 +79,8 @@
 #define MP_THREAD_SYNC_RW_WRITE_LOCKED(CONTEXT)                                (CONTEXT)->IsWriteLockHeld
 #define MP_THREAD_SYNC_RW_WRITE_LOCK(CONTEXT)                                  (CONTEXT)->EnterReadLock()
 #define MP_THREAD_SYNC_RW_WRITE_UNLOCK(CONTEXT)                                (CONTEXT)->ExitReadLock()
+
+#define MP_PROCESS                                                             ::System::Diagnostics::Process
+#define MP_PROCESS_CURRENT_GET                                                 ::System::Diagnostics::Process::GetCurrentProcess
+#define MP_PROCESS_ID_GET(CONTEXT)                                             (CONTEXT)->Id
+#define MP_PROCESS_NAME_GET(CONTEXT)                                           (CONTEXT)->ProcessName

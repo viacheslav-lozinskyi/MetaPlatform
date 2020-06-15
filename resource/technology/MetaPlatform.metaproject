@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MetaProject.technology version="1.0">
-  <info>
-    <item name="ABBREVIATION" value="MP"/>
-    <item name="AUTHORS" value="Viacheslav Lozinskyi"/>
-    <item name="COPYRIGHT" value="Copyright (c) 2018-2020 by Viacheslav Lozinskyi. All rights reserved."/>
-    <item name="CULTURE" value=""/>
-    <item name="DESCRIPTION" value="This platform allow to write cross-platform, cross-compiler and cross-language code"/>
-    <item name="KEYWORDS" value="MetaPlatform, C++, cross-platform, cross-compiler, cross-language, platform, native"/>
-    <item name="OWNERS" value="Viacheslav Lozinskyi"/>
-    <item name="PICTURE" value=""/>
-    <item name="TITLE" value="MetaPlatform"/>
-    <item name="TYPE" value="PLATFORM"/>
-    <item name="VERSION" value=""/>
-    <item name="VERSIONS" value=""/>
-  </info>
-
-  <license>
-    <item name="ABBREVIATION" value="MIT"/>
-    <item name="TITLE" value=""/>
-    <item name="VERSION" value=""/>
-  </license>
-
-  <link>
-    <item name="DESCRIPTION" value="https://viacheslav-lozinskyi.github.io/MetaPlatform/"/>
-    <item name="DOWNLOAD" value="https://github.com/viacheslav-lozinskyi/MetaPlatform"/>
-    <item name="LICENSE" value="https://github.com/viacheslav-lozinskyi/MetaPlatform/blob/master/LICENSE"/>
-    <item name="PICTURE" value=""/>
-    <item name="SOURCES" value="https://github.com/viacheslav-lozinskyi/MetaPlatform"/>
-  </link>
-
-  <variants>
+  <!-- Specification is here: https://github.com/viacheslav-lozinskyi/MetaProject/blob/master/resource/document/specification/Technology.md -->
     <!--<item name="Visual Studio" compilers="12.0;14.0;15.0;" files=".vxproj;" platforms="Windows;" processors="" technologies="C++ Runtime Library;" types="APPLICATION;CONSOLE;LIBRARY;INSTALLER;STATIC;TEST;WEB;" versions="1.0;"/>-->
   </variants>
 </MetaProject.technology>

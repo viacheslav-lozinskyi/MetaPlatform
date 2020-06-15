@@ -138,13 +138,27 @@
 #define MP_TIME_TIMESTAMP_GET                                                  ::System::Diagnostics::Stopwatch::GetTimestamp
 #define MP_TIME_TIMESTAMP_MILLISECOND_GET                                      ::System::Environment::TickCount
 #define MP_TIME_MILISECOND_DIFF(CONTEXT1, CONTEXT2)                            (int)((CONTEXT2)->Subtract(*(CONTEXT1)).TotalMilliseconds)
+#define MP_TIME_MILISECOND_ADD(CONTEXT, VALUE)                                 (CONTEXT) = (CONTEXT)->AddMilliseconds(VALUE)
 #define MP_TIME_MILISECOND_GET(CONTEXT)                                        (CONTEXT)->Millisecond
+#define MP_TIME_MILISECOND_SET(CONTEXT, VALUE)                                 (CONTEXT) = (CONTEXT)->AddMilliseconds(VALUE - (CONTEXT)->Millisecond)
+#define MP_TIME_SECOND_ADD(CONTEXT, VALUE)                                     (CONTEXT) = (CONTEXT)->AddSeconds(VALUE)
 #define MP_TIME_SECOND_GET(CONTEXT)                                            (CONTEXT)->Second
+#define MP_TIME_SECOND_SET(CONTEXT, VALUE)                                     (CONTEXT) = (CONTEXT)->AddSeconds(VALUE - (CONTEXT)->Second)
+#define MP_TIME_MINUTE_ADD(CONTEXT, VALUE)                                     (CONTEXT) = (CONTEXT)->AddMinutes(VALUE)
 #define MP_TIME_MINUTE_GET(CONTEXT)                                            (CONTEXT)->Minute
+#define MP_TIME_MINUTE_SET(CONTEXT, VALUE)                                     (CONTEXT) = (CONTEXT)->AddMinutes(VALUE - (CONTEXT)->Minute)
+#define MP_TIME_HOUR_ADD(CONTEXT, VALUE)                                       (CONTEXT) = (CONTEXT)->AddHours(VALUE)
 #define MP_TIME_HOUR_GET(CONTEXT)                                              (CONTEXT)->Hour
+#define MP_TIME_HOUR_SET(CONTEXT, VALUE)                                       (CONTEXT) = (CONTEXT)->AddHours(VALUE - (CONTEXT)->Hour)
+#define MP_TIME_DAY_ADD(CONTEXT, VALUE)                                        (CONTEXT) = (CONTEXT)->AddDays(VALUE)
 #define MP_TIME_DAY_GET(CONTEXT)                                               (CONTEXT)->Day
+#define MP_TIME_DAY_SET(CONTEXT, VALUE)                                        (CONTEXT) = (CONTEXT)->AddDays(VALUE - (CONTEXT)->Day)
+#define MP_TIME_MONTH_ADD(CONTEXT, VALUE)                                      (CONTEXT) = (CONTEXT)->AddMonths(VALUE)
 #define MP_TIME_MONTH_GET(CONTEXT)                                             (CONTEXT)->Month
+#define MP_TIME_MONTH_SET(CONTEXT, VALUE)                                      (CONTEXT) = (CONTEXT)->AddMonths(VALUE - (CONTEXT)->Month)
+#define MP_TIME_YEAR_ADD(CONTEXT, VALUE)                                       (CONTEXT) = (CONTEXT)->AddYears(VALUE)
 #define MP_TIME_YEAR_GET(CONTEXT)                                              (CONTEXT)->Year
+#define MP_TIME_YEAR_SET(CONTEXT, VALUE)                                       (CONTEXT) = (CONTEXT)->AddYears(VALUE - (CONTEXT)->Year)
 
 #define MP_TIMER                                                               ::System::Windows::Threading::DispatcherTimer
 #define MP_TIMER_INITIALIZE(CONTEXT, CALLBACK)                                 CONTEXT = gcnew ::System::Windows::Threading::DispatcherTimer(); (CONTEXT)->Tick += gcnew ::System::EventHandler(CALLBACK)

@@ -1,15 +1,14 @@
-@cls
 @echo ==========================================================================
 @echo Installing of default build environment...
 @echo ==========================================================================
 
-@if "%1"=="" goto :default
+@if "%1"=="" goto :error
 @setx MP_OUTPUT_FOLDER %*
 @goto :finish
 
-:default
-@setx MP_OUTPUT_FOLDER c:
-@echo ==========================================================================
+:error
+@echo OPERATION FAILED!
+@echo ---
 @echo USAGE:
 @echo    install_environment.bat [output_folder]
 
