@@ -21,6 +21,8 @@
 #define MP_DEBUGGER_JOINED                                                     [::System::Diagnostics::DebuggerBrowsable(::System::Diagnostics::DebuggerBrowsableState::RootHidden)]
 #endif
 
+#define MP_DEBUGGER_BREAK                                                      ::System::Diagnostics::Debugger::Break
+
 #define MP_TRACE_DEBUG(MESSAGE)                                                ::System::Diagnostics::Debug::WriteLine(MESSAGE)
 
 #define MP_STACKTRACE                                                          ::System::Diagnostics::StackTrace^

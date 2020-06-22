@@ -25,6 +25,7 @@
 
 :continue3
 @rmdir /S /Q %MP_OUTPUT_FOLDER%\output\package\metaplatform
+@rmdir /S /Q %HOMEDRIVE%%HOMEPATH%\.nuget\packages\metaplatform
 @mkdir %MP_OUTPUT_FOLDER%\output\package\metaplatform
 @xcopy /S /I /Q ..\package\*.nuspec %MP_OUTPUT_FOLDER%\output\package\metaplatform
 @xcopy /S /I /Q ..\package\*.targets %MP_OUTPUT_FOLDER%\output\package\metaplatform\build

@@ -49,7 +49,7 @@
 #define MP_UINT128                                                             unsigned __int128
 
 #define MP_EXCEPTION                                                           ::System::Exception
-#define MP_EXCEPTION_MESSAGE_GET(CONTEXT)                                      (CONTEXT)->ToString()
+#define MP_EXCEPTION_MESSAGE_GET(CONTEXT)                                      (CONTEXT)->Message
 
 #define MP_BUFFER(TYPE)                                                        ::System::Collections::Generic::List<TYPE>
 #define MP_BUFFER_EMPTY(CONTEXT)                                               ((CONTEXT)->Count == 0)
