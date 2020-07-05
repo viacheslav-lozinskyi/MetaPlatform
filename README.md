@@ -1,3 +1,10 @@
+![Image](https://img.shields.io/github/license/viacheslav-lozinskyi/MetaPlatform)
+![Image](https://img.shields.io/github/issues/viacheslav-lozinskyi/MetaPlatform)
+![Image](https://img.shields.io/nuget/dt/MetaPlatform?link=https://www.nuget.org/packages/MetaPlatform)
+![Image](https://img.shields.io/nuget/v/MetaPlatform?link=https://www.nuget.org/packages/MetaPlatform)
+![Image](https://img.shields.io/github/repo-size/viacheslav-lozinskyi/MetaPlatform)
+![Image](https://img.shields.io/github/languages/code-size/viacheslav-lozinskyi/MetaPlatform)
+
 ## What is MetaPlatform?
 
 This technology is necessary for that who solve next issues:
