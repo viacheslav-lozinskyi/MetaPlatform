@@ -16,7 +16,7 @@
 
 :continue2
 @if exist "%MP_OUTPUT_FOLDER%\output\package\nuget.exe" goto :continue3
-@echo File NuGet.exe not found!
+@echo ERROR: File NuGet.exe not found!
 @echo ------
 @echo Copy this file to folder "%MP_OUTPUT_FOLDER%\output\package" from one of next location:
 @echo ------
