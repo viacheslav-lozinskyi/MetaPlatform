@@ -2,36 +2,25 @@
 @echo Creating of NuGet package...
 @echo ==========================================================================
 @echo Project name: MetaPlatform
-@echo Output folder: %MP_OUTPUT_FOLDER%
+@echo Output folder: %USERPROFILE%\.metaoutput\package
 @echo ==========================================================================
 
-@if exist %MP_OUTPUT_FOLDER%\output\package\ goto :continue1
-@mkdir %MP_OUTPUT_FOLDER%\output\package
-
+@if exist %USERPROFILE%\.metaoutput\package\ goto :continue1
+@mkdir %USERPROFILE%\.metaoutput\package
 :continue1
-@if not "%MP_OUTPUT_FOLDER%" == "" goto :continue2
-@echo Build environment is not initialized.
-@echo Run "metaplatform\resource\script\install_environment.bat" to resolve the problem.
-@goto :finish
 
-:continue2
-@if exist "%MP_OUTPUT_FOLDER%\output\package\nuget.exe" goto :continue3
-@echo ERROR: File NuGet.exe not found!
-@echo ------
-@echo Copy this file to folder "%MP_OUTPUT_FOLDER%\output\package" from one of next location:
-@echo ------
-@dir /B /S %USERPROFILE%\nuget.exe
-@goto :finish
-
-:continue3
-@rmdir /S /Q %MP_OUTPUT_FOLDER%\output\package\metaplatform
+@if not exist %USERPROFILE%\.metaoutput\package\metaplatform goto :continue2
+@echo --- Package removing... --------------------------------------------------
+@rmdir /S /Q %USERPROFILE%\.metaoutput\package\metaplatform
 @rmdir /S /Q %HOMEDRIVE%%HOMEPATH%\.nuget\packages\metaplatform
-@mkdir %MP_OUTPUT_FOLDER%\output\package\metaplatform
-@xcopy /S /I /Q ..\package\*.nuspec %MP_OUTPUT_FOLDER%\output\package\metaplatform
-@xcopy /S /I /Q ..\package\*.targets %MP_OUTPUT_FOLDER%\output\package\metaplatform\build
-@xcopy /S /I /Q ..\..\library\*.hpp %MP_OUTPUT_FOLDER%\output\package\metaplatform\include
-@echo ==========================================================================
-@%MP_OUTPUT_FOLDER%\output\package\nuget.exe pack %MP_OUTPUT_FOLDER%\output\package\metaplatform\MetaPlatform.nuspec -OutputDirectory %MP_OUTPUT_FOLDER%\output\package\metaplatform
+:continue2
 
-:finish
+@echo --- Package copying... ---------------------------------------------------
+@mkdir %USERPROFILE%\.metaoutput\package\metaplatform
+@xcopy /S /I /Q ..\package\metaplatform*.nuspec %USERPROFILE%\.metaoutput\package\metaplatform
+@xcopy /S /I /Q ..\package\metaplatform*.targets %USERPROFILE%\.metaoutput\package\metaplatform\build
+@xcopy /S /I /Q ..\..\library\metaplatform.core\*.hpp %USERPROFILE%\.metaoutput\package\metaplatform\include\metaplatform.core
+
+@echo --- Package generating... ------------------------------------------------
+@..\..\..\metaplatform\resource\tool\nuget.exe pack %USERPROFILE%\.metaoutput\package\metaplatform\MetaPlatform.nuspec -OutputDirectory %USERPROFILE%\.metaoutput\package\metaplatform
 @echo ==========================================================================

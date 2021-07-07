@@ -15,6 +15,9 @@
 #define MP_DRIVE_FIND_FOUND(CONTEXT, ITERATOR)                                 (((ITERATOR) >= 0) && ((ITERATOR) < (CONTEXT)->Length))
 #define MP_DRIVE_FIND_NEXT(CONTEXT, ITERATOR)                                  (ITERATOR)++;
 
+#define MP_ENVIRONMENT_VARIABLE_GET(NAME)                                      ::System::Environment::GetEnvironmentVariable(NAME)
+#define MP_ENVIRONMENT_VARIABLE_SET(NAME, VALUE)                               ::System::Environment::SetEnvironmentVariable(NAME, VALUE)
+
 #define MP_FILE_FOUND(URL)                                                     ::System::IO::File::Exists(URL)
 #define MP_FILE_EXECUTE(URL)                                                   ::System::Diagnostics::Process::Start(URL)
 #define MP_FILE_CREATE(URL)                                                    ::System::IO::File::Create(URL)
@@ -23,6 +26,7 @@
 #define MP_FILE_MOVE(SRC_URL, DST_URL)                                         ::System::IO::File::Move((SRC_URL), (DST_URL))
 #define MP_FILE_FULLTEXT_GET(URL)                                              ::System::IO::File::ReadAllText(URL)
 #define MP_FILE_FULLTEXT_SET(URL, VALUE)                                       ::System::IO::File::WriteAllText((URL), (VALUE))
+#define MP_FILE_SIZE_GET(URL)                                                  ::System::IO::FileInfo(URL).Length
 
 #define MP_FILE_ATTRIBUTES_GET(URL)                                            ::System::IO::File::GetAttributes(URL)
 #define MP_FILE_ATTRIBUTES_SET(URL, VALUE)                                     ::System::IO::File::SetAttributes((URL), (VALUE))
@@ -149,4 +153,5 @@
 #define MP_FOLDER_SYSTEM_STARTUP                                               ::System::Environment::GetFolderPath(::System::Environment::SpecialFolder::Startup)
 #define MP_FOLDER_SYSTEM_SYSTEM                                                ::System::Environment::GetFolderPath(::System::Environment::SpecialFolder::System)
 #define MP_FOLDER_SYSTEM_TEMP                                                  ::System::IO::Path::GetTempPath()
+#define MP_FOLDER_SYSTEM_USER_HOME                                             ::System::Environment::GetEnvironmentVariable("USERPROFILE")
 #define MP_FOLDER_SYSTEM_VIDEOS                                                ::System::Environment::GetFolderPath(::System::Environment::SpecialFolder::MyVideos)

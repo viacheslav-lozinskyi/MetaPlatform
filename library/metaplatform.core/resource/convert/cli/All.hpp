@@ -80,6 +80,7 @@ public:
 #define MP_CONVERT_STREAM_FROM_UTF7(CONTEXT, VALUE)                            __MP_CONVERT::SetStream(CONTEXT, ::System::Text::Encoding::UTF7->GetBytes(VALUE))
 #define MP_CONVERT_STREAM_FROM_UTF8(CONTEXT, VALUE)                            __MP_CONVERT::SetStream(CONTEXT, ::System::Text::Encoding::UTF8->GetBytes(VALUE))
 #define MP_CONVERT_STREAM_FROM_WEBNAME(CONTEXT, VALUE)                         __MP_CONVERT::SetStream(CONTEXT, ::System::Text::Encoding::WebName->GetBytes(VALUE))
+#define MP_CONVERT_STREAM_FROM_ZIP_STREAM(CONTEXT, RESULT)                     { if ((CONTEXT)->CanSeek) (CONTEXT)->Position = 0; auto a_CONTEXT = gcnew ::System::IO::Compression::DeflateStream(CONTEXT, ::System::IO::Compression::CompressionMode::Decompress, true); a_CONTEXT->CopyTo(RESULT); a_CONTEXT->Close(); }
 
 #define MP_CONVERT_STREAM_TO_ASCII(CONTEXT)                                    __MP_CONVERT::GetString(CONTEXT, ::System::Text::Encoding::ASCII)
 #define MP_CONVERT_STREAM_TO_BASE64(CONTEXT)                                   __MP_CONVERT::GetBase64(CONTEXT)
@@ -89,6 +90,7 @@ public:
 #define MP_CONVERT_STREAM_TO_UTF7(CONTEXT)                                     __MP_CONVERT::GetString(CONTEXT, ::System::Text::Encoding::UTF7)
 #define MP_CONVERT_STREAM_TO_UTF8(CONTEXT)                                     __MP_CONVERT::GetString(CONTEXT, ::System::Text::Encoding::UTF8)
 #define MP_CONVERT_STREAM_TO_WEBNAME(CONTEXT)                                  __MP_CONVERT::GetString(CONTEXT, ::System::Text::Encoding::WebName)
+#define MP_CONVERT_STREAM_TO_ZIP_STREAM(CONTEXT, RESULT)                       { auto a_CONTEXT1 = gcnew ::System::IO::MemoryStream(); auto a_CONTEXT2 = gcnew ::System::IO::Compression::DeflateStream(a_CONTEXT1, ::System::IO::Compression::CompressionMode::Compress, true); if ((CONTEXT)->CanSeek) (CONTEXT)->Position = 0; (CONTEXT)->CopyTo(a_CONTEXT2); a_CONTEXT2->Close(); a_CONTEXT1->Position = 0; a_CONTEXT1->CopyTo(RESULT); a_CONTEXT1->Close(); }
 
 #define MP_CONVERT_STRING_FROM_BASE64(CONTEXT)                                 ::System::Text::Encoding::ASCII->GetString(::System::Convert::FromBase64String(CONTEXT))
 #define MP_CONVERT_STRING_FROM_DOUBLE(CONTEXT)                                 (CONTEXT).ToString()

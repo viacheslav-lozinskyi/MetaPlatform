@@ -22,6 +22,8 @@
 #define MP_NEW                                                                 gcnew
 #define MP_DELETE                                                              delete
 
+#define MP_FOREACH(TYPE, NAME, CONTAINER)                                      for each (TYPE NAME in CONTAINER)
+
 #define MP_PROPERTY(TYPE, NAME)                                                property TYPE NAME
 
 #define MP_TYPE_ID(TYPE)                                                       TYPE::typeid

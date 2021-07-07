@@ -18,8 +18,7 @@
 #define MP_THREAD_PRIORITY_SET(CONTEXT, VALUE)                                 (CONTEXT)->Priority = (VALUE)
 #define MP_THREAD_SYNCHRONIZED_GET(ADDRESS)                                    ::System::Threading::Thread::VolatileRead(ADDRESS)
 #define MP_THREAD_SYNCHRONIZED_SET(ADDRESS, VALUE)                             ::System::Threading::Thread::VolatileWrite((ADDRESS), VALUE)
-#define MP_THREAD_CALLBACK_SENDER                                              sender
-#define MP_THREAD_CALLBACK_PROPERTIES                                          ::System::Object^ sender
+#define MP_THREAD_CALLBACK_MAIN(CALLBACK, SENDER)                              CALLBACK(::System::Object^ SENDER)
 #define MP_THREAD_START(CONTEXT, PROPERTY)                                     (CONTEXT)->Start(PROPERTY)
 #define MP_THREAD_STOP(CONTEXT)                                                (CONTEXT)->Abort()
 #define MP_THREAD_ALIVE(CONTEXT)                                               ((CONTEXT)->ThreadState == ::System::Threading::ThreadState::Running)

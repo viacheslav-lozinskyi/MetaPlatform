@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata minClientVersion="4.0">
     <id>MetaPlatform</id>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <title>MetaPlatform</title>
     <authors>Viacheslav Lozinskyi</authors>
     <owners>Viacheslav Lozinskyi</owners>
@@ -14,8 +14,10 @@
     <repository type="git" url="https://github.com/viacheslav-lozinskyi/MetaPlatform" branch="master"/>
     <license type="expression">MIT</license>
     <releaseNotes>
-- Implementation of MP_EXCEPTION_MESSAGE_GET is changed
-- Function MP_DEBUGGER_BREAK is added
+- Functions MP_WEB_CLIENT_* are added
+- Specification of MP_THREAD_* functions are added
+- Specification of MP_CONVERT_STREAM_FROM_ZIP_* functions are added
+- Specification of MP_FOREACH is created
 - Make script is updated
     </releaseNotes>
     <copyright>Copyright (c) 2018-2020 by Viacheslav Lozinskyi. All rights reserved.</copyright>
