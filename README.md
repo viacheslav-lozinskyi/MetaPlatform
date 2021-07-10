@@ -1,9 +1,9 @@
-![Image](https://img.shields.io/github/license/viacheslav-lozinskyi/MetaPlatform)
-![Image](https://img.shields.io/github/issues/viacheslav-lozinskyi/MetaPlatform)
-![Image](https://img.shields.io/nuget/dt/MetaPlatform?link=https://www.nuget.org/packages/MetaPlatform)
-![Image](https://img.shields.io/nuget/v/MetaPlatform?link=https://www.nuget.org/packages/MetaPlatform)
-![Image](https://img.shields.io/github/repo-size/viacheslav-lozinskyi/MetaPlatform)
-![Image](https://img.shields.io/github/languages/code-size/viacheslav-lozinskyi/MetaPlatform)
+![GitHub](https://img.shields.io/github/license/viacheslav-lozinskyi/MetaPlatform)
+[![GitHub issues](https://img.shields.io/github/issues/viacheslav-lozinskyi/MetaPlatform)](https://github.com/viacheslav-lozinskyi/MetaPlatform/issues)
+[![GitHub Repo stars](https://img.shields.io/github/stars/viacheslav-lozinskyi/MetaPlatform)](https://github.com/viacheslav-lozinskyi/MetaPlatform/stargazers)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/viacheslav-lozinskyi/MetaPlatform)](https://github.com/viacheslav-lozinskyi/MetaPlatform)
+[![Nuget](https://img.shields.io/nuget/dt/MetaPlatform)](https://www.nuget.org/packages/MetaPlatform)
+[![Nuget](https://img.shields.io/nuget/v/MetaPlatform)](https://www.nuget.org/packages/MetaPlatform)
 
 ## What is MetaPlatform?
 
