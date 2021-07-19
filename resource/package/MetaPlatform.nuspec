@@ -16,7 +16,6 @@
     <releaseNotes>
 - Functions MP_FILE_STREAM_BUFFER* are added
 - Functions MP_THREAD_APARTMENT* are added
-- Script is updated
 - Make script is updated
     </releaseNotes>
     <copyright>Copyright (c) 2018-2020 by Viacheslav Lozinskyi. All rights reserved.</copyright>
