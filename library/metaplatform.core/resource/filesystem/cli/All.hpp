@@ -72,6 +72,13 @@
 #define MP_FILE_STREAM_WRITE(CONTEXT, BUFFER, POSITION, SIZE)                  (CONTEXT)->Write(BUFFER, POSITION, SIZE)
 #define MP_FILE_STREAM_WRITE_SUPPORTED(CONTEXT)                                (CONTEXT)->CanWrite
 
+#define MP_FILE_STREAM_BUFFER                                                  array<unsigned char>
+#define MP_FILE_STREAM_BUFFER_INITIALIZE(CONTEXT, SIZE)                        (CONTEXT) = gcnew array<unsigned char>(SIZE)
+#define MP_FILE_STREAM_BUFFER_FINALIZE(CONTEXT)                                (CONTEXT) = nullptr
+#define MP_FILE_STREAM_BUFFER_BYTE_GET(CONTEXT, INDEX)                         (CONTEXT)[INDEX]
+#define MP_FILE_STREAM_BUFFER_BYTE_SET(CONTEXT, INDEX, VALUE)                  (CONTEXT)[INDEX] = VALUE
+#define MP_FILE_STREAM_BUFFER_SIZE_GET(CONTEXT)                                (CONTEXT)->Length
+
 #define MP_FILE_STREAM_ACCESS                                                  ::System::IO::FileAccess
 #define MP_FILE_STREAM_ACCESS_READ                                             ::System::IO::FileAccess::Read
 #define MP_FILE_STREAM_ACCESS_READWRITE                                        ::System::IO::FileAccess::ReadWrite

@@ -13,6 +13,7 @@
 @echo --- Package removing... --------------------------------------------------
 @rmdir /S /Q %USERPROFILE%\.metaoutput\package\metaplatform
 @rmdir /S /Q %HOMEDRIVE%%HOMEPATH%\.nuget\packages\metaplatform
+@rmdir /S /Q ..\..\..\packages
 :continue2
 
 @echo --- Package copying... ---------------------------------------------------

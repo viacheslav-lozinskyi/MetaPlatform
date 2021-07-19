@@ -11,6 +11,8 @@
 #define MP_THREAD_INITIALIZE(CONTEXT, CALLBACK)                                CONTEXT = gcnew ::System::Threading::Thread(gcnew ::System::Threading::ParameterizedThreadStart(CALLBACK))
 #define MP_THREAD_FINALIZE(CONTEXT)                                            delete (CONTEXT)
 #define MP_THREAD_CURRENT_GET                                                  ::System::Threading::Thread::CurrentThread
+#define MP_THREAD_APARTMENT_GET(CONTEXT)                                       (CONTEXT)->GetApartmentState()
+#define MP_THREAD_APARTMENT_SET(CONTEXT, VALUE)                                (CONTEXT)->TrySetApartmentState(VALUE)
 #define MP_THREAD_NAME_GET(CONTEXT)                                            (CONTEXT)->Name
 #define MP_THREAD_NAME_SET(CONTEXT, VALUE)                                     (CONTEXT)->Name = VALUE
 #define MP_THREAD_ID_GET(CONTEXT)                                              (CONTEXT)->ManagedThreadId
@@ -24,6 +26,10 @@
 #define MP_THREAD_ALIVE(CONTEXT)                                               ((CONTEXT)->ThreadState == ::System::Threading::ThreadState::Running)
 #define MP_THREAD_SLEEP(INTERVAL)                                              ::System::Threading::Thread::Sleep(INTERVAL)
 #define MP_THREAD_YIELD                                                        ::System::Threading::Thread::Yield
+
+#define MP_THREAD_APARTMENT                                                    ::System::Threading::ApartmentState
+#define MP_THREAD_APARTMENT_MTA                                                ::System::Threading::ApartmentState::MTA
+#define MP_THREAD_APARTMENT_STA                                                ::System::Threading::ApartmentState::STA
 
 #define MP_THREAD_PRIORITY                                                     ::System::Threading::ThreadPriority
 #define MP_THREAD_PRIORITY_IDLE                                                ::System::Threading::ThreadPriority::Lowest

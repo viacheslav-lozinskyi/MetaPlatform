@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MetaProject.technology version="1.0">
-  <!-- Specification is here: https://github.com/viacheslav-lozinskyi/MetaProject/blob/master/resource/document/specification/Technology.md -->
     <!--<item name="Visual Studio" compilers="12.0;14.0;15.0;" files=".vxproj;" platforms="Windows;" processors="" technologies="C++ Runtime Library;" types="APPLICATION;CONSOLE;LIBRARY;INSTALLER;STATIC;TEST;WEB;" versions="1.0;"/>-->
   </variants>
 </MetaProject.technology>

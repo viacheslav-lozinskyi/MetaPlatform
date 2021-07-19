@@ -155,6 +155,7 @@
 #define MP_TIME_DAY_ADD(CONTEXT, VALUE)                                        (CONTEXT) = (CONTEXT)->AddDays(VALUE)
 #define MP_TIME_DAY_GET(CONTEXT)                                               (CONTEXT)->Day
 #define MP_TIME_DAY_SET(CONTEXT, VALUE)                                        (CONTEXT) = (CONTEXT)->AddDays(VALUE - (CONTEXT)->Day)
+#define MP_TIME_DAY_INDEX_GET(CONTEXT)                                         (int)(CONTEXT)->DayOfWeek
 #define MP_TIME_MONTH_ADD(CONTEXT, VALUE)                                      (CONTEXT) = (CONTEXT)->AddMonths(VALUE)
 #define MP_TIME_MONTH_GET(CONTEXT)                                             (CONTEXT)->Month
 #define MP_TIME_MONTH_SET(CONTEXT, VALUE)                                      (CONTEXT) = (CONTEXT)->AddMonths(VALUE - (CONTEXT)->Month)
