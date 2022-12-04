@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata minClientVersion="4.0">
     <id>MetaPlatform</id>
-    <version>1.0.9</version>
+    <version>1.1.0</version>
     <title>MetaPlatform</title>
     <authors>Viacheslav Lozinskyi</authors>
     <owners>Viacheslav Lozinskyi</owners>
@@ -14,11 +14,9 @@
     <repository type="git" url="https://github.com/viacheslav-lozinskyi/MetaPlatform" branch="master"/>
     <license type="expression">MIT</license>
     <releaseNotes>
-- Functions MP_FILE_STREAM_BUFFER* are added
-- Functions MP_THREAD_APARTMENT* are added
-- Make script is updated
+- Minor improvements
     </releaseNotes>
-    <copyright>Copyright (c) 2018-2020 by Viacheslav Lozinskyi. All rights reserved.</copyright>
+    <copyright>Copyright (c) 2018-2022 by Viacheslav Lozinskyi. All rights reserved.</copyright>
     <tags>MetaPlatform, C++, cross-platform, cross-compiler, cross-language, platform, native</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <serviceable>true</serviceable>
