@@ -138,7 +138,7 @@
 #define MP_TIME                                                                ::System::DateTime
 #define MP_TIME_CURRENT                                                        ::System::DateTime::Now
 #define MP_TIME_TIMESTAMP_GET                                                  ::System::Diagnostics::Stopwatch::GetTimestamp
-#define MP_TIME_TIMESTAMP_MILLISECOND_GET                                      ::System::Environment::TickCount
+#define MP_TIME_TIMESTAMP_MILLISECOND_GET                                      (unsigned long long)::System::Environment::TickCount
 #define MP_TIME_MILISECOND_DIFF(CONTEXT1, CONTEXT2)                            (int)((CONTEXT2)->Subtract(*(CONTEXT1)).TotalMilliseconds)
 #define MP_TIME_MILISECOND_ADD(CONTEXT, VALUE)                                 (CONTEXT) = (CONTEXT)->AddMilliseconds(VALUE)
 #define MP_TIME_MILISECOND_GET(CONTEXT)                                        (CONTEXT)->Millisecond
