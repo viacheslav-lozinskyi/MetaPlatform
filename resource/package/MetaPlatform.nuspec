@@ -17,7 +17,7 @@
     <releaseNotes>
 - Minor improvements
     </releaseNotes>
-    <copyright>Copyright (c) 2018-2022 by Viacheslav Lozinskyi. All rights reserved.</copyright>
+    <copyright>Copyright (c) 2018-2023 by Viacheslav Lozinskyi. All rights reserved.</copyright>
     <tags>MetaPlatform, C++, cross-platform, cross-compiler, cross-language, platform, native</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <serviceable>true</serviceable>
