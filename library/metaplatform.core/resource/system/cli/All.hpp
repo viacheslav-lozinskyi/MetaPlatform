@@ -20,7 +20,14 @@
 #define MP_SYSTEM_KEYBOARD_DELAY                                               ::System::Windows::SystemParameters::KeyboardDelay
 #define MP_SYSTEM_KEYBOARD_SPEED                                               ::System::Windows::SystemParameters::KeyboardSpeed
 #define MP_SYSTEM_MOUSE_SUPPORTED                                              ::System::Windows::SystemParameters::IsMousePresent
-#define MP_SYSTEM_OPERATION_SYSTEM_NAME                                        ::System::Environment::OSVersion->VersionString
+#define MP_SYSTEM_OPERATION_SYSTEM_ARCHITECTURE                                ::System::Runtime::InteropServices::RuntimeInformation::OSArchitecture.ToString()
+#define MP_SYSTEM_OPERATION_SYSTEM_NAME                                        ::System::Runtime::InteropServices::RuntimeInformation::OSDescription
+#define MP_SYSTEM_OPERATION_SYSTEM_PLATFORN                                    ::System::Environment::OSVersion->Platform.ToString()
+#define MP_SYSTEM_OPERATION_SYSTEM_VERSION                                     ::System::Environment::OSVersion->Version->ToString()
+#define MP_SYSTEM_OPERATION_SYSTEM_VERSION_BUILD                               ::System::Environment::OSVersion->Version->Build
+#define MP_SYSTEM_OPERATION_SYSTEM_VERSION_MAJOR                               ::System::Environment::OSVersion->Version->Major
+#define MP_SYSTEM_OPERATION_SYSTEM_VERSION_MINOR                               ::System::Environment::OSVersion->Version->Minor
+#define MP_SYSTEM_OPERATION_SYSTEM_VERSION_REVISION                            ::System::Environment::OSVersion->Version->MinorRevision
 #define MP_SYSTEM_PROCESSOR_COUNT                                              ::System::Environment::ProcessorCount
 
 #define MP_SYSTEM_SCREEN_CLIENT_X                                              (int)::System::Windows::SystemParameters::WorkArea.Left

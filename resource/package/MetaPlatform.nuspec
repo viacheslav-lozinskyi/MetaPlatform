@@ -9,7 +9,6 @@
     <description>This platform allow to write cross-platform, cross-compiler and cross-language code</description>
     <summary>This platform allow to write cross-platform, cross-compiler and cross-language code</summary>
     <language>en-US</language>
-    <!--<iconUrl>https://github.com/viacheslav-lozinskyi/MetaPlatform/resource/picture/logo.png</iconUrl>-->
     <iconUrl>https://www.metaoutput.net/_functions/watch?source=NUGET&amp;project=MetaPlatform&amp;action=VIEW&amp;size=128x128&amp;url=https://www.nuget.org/packages/MetaPlatform</iconUrl>
     <projectUrl>https://viacheslav-lozinskyi.github.io/MetaPlatform</projectUrl>
     <repository type="git" url="https://github.com/viacheslav-lozinskyi/MetaPlatform" branch="master"/>

@@ -159,6 +159,7 @@
 #define MP_FOLDER_SYSTEM_START_MENU                                            ::System::Environment::GetFolderPath(::System::Environment::SpecialFolder::StartMenu)
 #define MP_FOLDER_SYSTEM_STARTUP                                               ::System::Environment::GetFolderPath(::System::Environment::SpecialFolder::Startup)
 #define MP_FOLDER_SYSTEM_SYSTEM                                                ::System::Environment::GetFolderPath(::System::Environment::SpecialFolder::System)
+#define MP_FOLDER_SYSTEM_SYSTEM_ROOT                                           ::System::Environment::GetEnvironmentVariable("SYSTEMROOT")
 #define MP_FOLDER_SYSTEM_TEMP                                                  ::System::IO::Path::GetTempPath()
 #define MP_FOLDER_SYSTEM_USER_HOME                                             ::System::Environment::GetEnvironmentVariable("USERPROFILE")
 #define MP_FOLDER_SYSTEM_VIDEOS                                                ::System::Environment::GetFolderPath(::System::Environment::SpecialFolder::MyVideos)

@@ -48,6 +48,8 @@
 #define MP_PICTURE_DPI_Y_GET(CONTEXT)                                          (CONTEXT)->DpiY
 #define MP_PICTURE_SIZE_X_GET(CONTEXT)                                         (((CONTEXT)->StreamSource != nullptr) ? (CONTEXT)->PixelWidth : 0)
 #define MP_PICTURE_SIZE_Y_GET(CONTEXT)                                         (((CONTEXT)->StreamSource != nullptr) ? (CONTEXT)->PixelHeight : 0)
+#define MP_PICTURE_STREAM_GET(CONTEXT)                                         (CONTEXT)->StreamSource
+#define MP_PICTURE_STREAM_SET(CONTEXT, VALUE)                                  (CONTEXT)->BeginInit(); (CONTEXT)->StreamSource = VALUE; (CONTEXT)->EndInit()
 
 #define MP_PICTURE_FORMAT                                                      System::Windows::Media::PixelFormat
 #define MP_PICTURE_FORMAT_RGBA128FLOAT                                         System::Windows::Media::PixelFormats::Rgba128Float
